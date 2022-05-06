@@ -1,0 +1,23 @@
+{
+	"/": {
+		"get": {
+			"description": "Template Get",
+			"tags": [ "Template Get" ],
+			"responses": {
+				"200": {
+					"description": "Template Get Result",
+					"content": {
+						"application/json; charset=utf-8": {
+							"schema": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/template_schema"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

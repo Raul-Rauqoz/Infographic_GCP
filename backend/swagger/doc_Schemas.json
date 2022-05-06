@@ -1,0 +1,16 @@
+{
+	"schemas": {
+		"template_schema": {
+			"type": "object",
+			"properties": {
+				"text_test": {
+					"type": "string",
+					"description": "test"
+				}
+			},
+			"example": {
+				"text_test": "Test"
+			}
+		}
+	}
+}
