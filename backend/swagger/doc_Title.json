@@ -2,8 +2,8 @@
 	"definition": {
 		"openapi": "3.0.1",
 		"info": {
-			"title": "Template",
-			"description": "Rauqoz_Description",
+			"title": "Rauqoz GCP",
+			"description": "Example on GCP Front + Back",
 			"version": "1.0.0"
 		},
 		"servers": [

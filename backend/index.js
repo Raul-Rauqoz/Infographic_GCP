@@ -7,4 +7,4 @@ const server_on = require('./server/server');
 /* 
     Check the folder "mongodb"
 */
-// const mongo_on = require('./mongodb/mongo_on');
+const mongo_on = require('./mongodb/mongo_on');

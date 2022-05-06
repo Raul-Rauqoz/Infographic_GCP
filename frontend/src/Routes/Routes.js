@@ -1,27 +1,24 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// Example start ---
-import { TemplateS } from '../Components/Templates/Styles/Template.styles';
-import ChildTemplate from '../Components/Templates/ChildTemplate';
-import Template from '../Components/Templates/Template';
-// Example end ---
 import PageError from '../Components/Error/PageError';
+import Login from '../Components/Login/Login';
+import Signup from '../Components/Signup/Signup';
+import User from '../Components/User/User';
 
 const RoutesPath = () => {
 	return (
-		<TemplateS>
+		<div>
 			<BrowserRouter>
 				<Routes>
 					{/* Route '/' */}
-					<Route exact path={'/'} element={<Template />}>
-						{/* Template with Childrens, you need add the father path on the children route */}
-						<Route exact path={'/child'} element={<ChildTemplate />} />
-					</Route>
+					<Route path={'/'} element={<Login />} />
+					<Route path={'/signup'} element={<Signup />} />
+					<Route path={'/user'} element={<User />} />
 					{/* Page Error for Any Other Page */}
-					<Route exact path={'*'} element={<PageError />} />
+					<Route path={'*'} element={<PageError />} />
 				</Routes>
 			</BrowserRouter>
-		</TemplateS>
+		</div>
 	);
 };
 

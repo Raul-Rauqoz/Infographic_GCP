@@ -1,19 +1,118 @@
 {
-	"/": {
+	"/all": {
 		"get": {
-			"description": "Template Get",
-			"tags": [ "Template Get" ],
+			"description": "Get all Users",
+			"tags": [ "Get all Users" ],
 			"responses": {
 				"200": {
-					"description": "Template Get Result",
+					"description": "Array All Users",
 					"content": {
 						"application/json; charset=utf-8": {
 							"schema": {
 								"type": "array",
 								"items": {
-									"$ref": "#/components/schemas/template_schema"
+									"$ref": "#/components/schemas/user"
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"/one": {
+		"post": {
+			"description": "Get one User",
+			"tags": [ "Get one User" ],
+			"requestBody": {
+				"content": {
+					"application/json; charset=utf-8": {
+						"schema": {
+							"$ref": "#/components/schemas/user"
+						}
+					}
+				}
+			},
+			"responses": {
+				"200": {
+					"description": "Object one User",
+					"content": {
+						"application/json; charset=utf-8": {
+							"schema": {
+								"$ref": "#/components/schemas/user"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"/create": {
+		"post": {
+			"description": "Create one User",
+			"tags": [ "Create one User" ],
+			"requestBody": {
+				"content": {
+					"application/json; charset=utf-8": {
+						"schema": {
+							"example": {
+								"nick": "rau"
+							}
+						}
+					}
+				}
+			},
+			"responses": {
+				"200": {
+					"description": "Object one User",
+					"content": {
+						"application/json; charset=utf-8": {
+							"schema": {
+								"$ref": "#/components/schemas/user"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"/delete": {
+		"delete": {
+			"description": "Delete one User",
+			"tags": [ "Delete one User" ],
+			"requestBody": {
+				"content": {
+					"application/json; charset=utf-8": {
+						"schema": {
+							"example": {
+								"nick": "rau"
+							}
+						}
+					}
+				}
+			},
+			"responses": {
+				"200": {
+					"description": "If it is removed",
+					"content": {
+						"application/json; charset=utf-8": {
+							"example": "true"
+						}
+					}
+				}
+			}
+		}
+	},
+	"/deleteall": {
+		"delete": {
+			"description": "Delete all Users",
+			"tags": [ "Delete all Users" ],
+			"responses": {
+				"200": {
+					"description": "If everything is removed",
+					"content": {
+						"application/json; charset=utf-8": {
+							"example": "true"
 						}
 					}
 				}

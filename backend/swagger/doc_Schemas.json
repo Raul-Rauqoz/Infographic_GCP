@@ -1,15 +1,22 @@
 {
 	"schemas": {
-		"template_schema": {
+		"user": {
 			"type": "object",
 			"properties": {
-				"text_test": {
-					"type": "string",
-					"description": "test"
+				"nick": {
+					"type": "String",
+					"require": true,
+					"description": "user nickname"
+				},
+				"pass": {
+					"type": "String",
+					"require": true,
+					"description": "password nick"
 				}
 			},
 			"example": {
-				"text_test": "Test"
+				"nick": "rau",
+				"pass": "123"
 			}
 		}
 	}
