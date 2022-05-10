@@ -1,5 +1,5 @@
 import axios from 'axios';
-const url_base = 'http://localhost:4000';
+const url_base = `http://${process.env.REACT_APP_BACK}`;
 
 export const get_login_ = async ({ nick, pass }) => {
 	var data = JSON.stringify({

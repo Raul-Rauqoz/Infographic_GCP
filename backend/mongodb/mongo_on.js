@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 // Connection
 const mongo_on = mongoose
-	.connect('mongodb://172.17.0.1:27017/')
+	.connect(`mongodb://${process.env.MONGO_DB}/`)
 	// .connect('mongodb://localhost:27017/')
 	.then(() => console.log('Connected to Mongo Docker'))
 	.catch((err) => console.error(err));
